@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using FlickrNet;
 
 namespace MacGourmetReader
 {
@@ -70,6 +71,20 @@ namespace MacGourmetReader
             }
             reader.Close();
             connection.Close();
+        }
+
+        Flickr flickr = new Flickr("c8d3216ea1ae6748898b504bfd6230b4", "2fe4e9f5632f86d5");
+            
+        private void convertButton_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(flickrTB.Text))
+                return;
+
+            PhotoInfo photoInfo = flickr.PhotosGetInfo(flickrTB.Text);
+            string imgUrl = photoInfo.MediumUrl;
+            string linkURL = photoInfo.WebUrl;
+
+
         }
     }
 }

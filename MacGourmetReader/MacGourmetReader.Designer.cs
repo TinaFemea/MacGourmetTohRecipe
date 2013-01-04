@@ -37,6 +37,8 @@
             this.filterTB = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.openButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flickrTB = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,6 +91,7 @@
             this.convertButton.TabIndex = 4;
             this.convertButton.Text = "Convert";
             this.convertButton.UseVisualStyleBackColor = true;
+            this.convertButton.Click += new System.EventHandler(this.convertButton_Click);
             // 
             // label2
             // 
@@ -131,11 +134,29 @@
             this.openButton.UseVisualStyleBackColor = true;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(22, 376);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "flickr URL";
+            // 
+            // flickrTB
+            // 
+            this.flickrTB.Location = new System.Drawing.Point(83, 372);
+            this.flickrTB.Name = "flickrTB";
+            this.flickrTB.Size = new System.Drawing.Size(443, 20);
+            this.flickrTB.TabIndex = 9;
+            // 
             // MacGourmetReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(627, 417);
+            this.Controls.Add(this.flickrTB);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.recipeLB);
             this.Controls.Add(this.groupBox1);
@@ -144,6 +165,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,6 +180,8 @@
         private System.Windows.Forms.TextBox filterTB;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button openButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox flickrTB;
     }
 }
 
