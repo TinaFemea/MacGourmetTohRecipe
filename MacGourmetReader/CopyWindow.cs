@@ -15,5 +15,10 @@ namespace MacGourmetReader
         {
             InitializeComponent();
         }
+
+        public void SetText(string outputText)
+        {
+            recipeOutputTB.Text = outputText;
+        }
     }
 }

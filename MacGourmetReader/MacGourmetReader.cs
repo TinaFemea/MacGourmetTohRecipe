@@ -81,9 +81,15 @@ namespace MacGourmetReader
                 return;
 
             PhotoInfo photoInfo = flickr.PhotosGetInfo(flickrTB.Text);
-            string imgUrl = photoInfo.MediumUrl;
-            string linkURL = photoInfo.WebUrl;
+            
+            HRecipe recipe = new HRecipe();
+            recipe.Name = recipeLB.SelectedItem.ToString();
+            recipe.SmallPhoto = photoInfo.MediumUrl;
+            recipe.PhotoLink = photoInfo.WebUrl;
 
+            CopyWindow copyWindow = new CopyWindow();
+            copyWindow.SetText(recipe.GetHTML());
+            copyWindow.Show();
 
         }
     }

@@ -63,6 +63,7 @@
     <Compile Include="CopyWindow.Designer.cs">
       <DependentUpon>CopyWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="HRecipe.cs" />
     <Compile Include="MacGourmetReader.cs">
       <SubType>Form</SubType>
     </Compile>
